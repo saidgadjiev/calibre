@@ -197,6 +197,9 @@ class RTFMLizer(object):
         return hex_string, width, height
 
     def clean_text(self, text):
+        text_file = open("\home\sample.txt", "w")
+        text_file.write(text)
+        text_file.close()
         # Remove excessive newlines
         text = re.sub('%s{3,}' % os.linesep, '%s%s' % (os.linesep, os.linesep), text)
 
